@@ -16,7 +16,7 @@ func TestParse(t *testing.T) {
 		{strings.Split("-g -i", " "), map[string]string{"-g": "", "-i": ""}, true},
 		{strings.Split("--name", " "), map[string]string{"--name": ""}, true},
 		{strings.Split("--name=denys", " "), map[string]string{"--name": "denys"}, true},
-		{[]string{}, nil, false},
+		{[]string{}, map[string]string{}, true},
 		{strings.Split("--name=denys=pol", " "), nil, false},
 		{[]string{"-"}, nil, false},
 	}

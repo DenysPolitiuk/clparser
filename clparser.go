@@ -19,7 +19,7 @@ func (err *BasicError) Error() string {
 // something somethingelse whatever
 func Parse(args []string) (map[string]string, error) {
 	if len(args) == 0 {
-		return map[string]string{}, &BasicError{"empty arguments"}
+		return make(map[string]string), nil
 	}
 	resultMap := make(map[string]string)
 	for currentPosition := 0; currentPosition < len(args); currentPosition++ {
